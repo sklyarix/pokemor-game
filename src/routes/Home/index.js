@@ -2,15 +2,12 @@ import React from 'react';
 
 import Header from '../../components/Header/Header';
 import Layout from '../../components/Layout/Layout';
-import Footer from '../../components/Footer/Footer';
 import PokemonsCard from '../../components/PokemonsCard/PokemonsCard';
-import MenuHeader from '../../components/MenuHeader';
 
 import s from './style.module.css';
 
-
 import bg3 from '../../components/img/bg3.jpg';
-import card_back_side from '../../components/img/card-back-side.jpg';
+import card_back_side from '../../components/img/card_back_side.jpg';
 
 const Pokemons = [
   {
@@ -154,7 +151,6 @@ const HomePage = ({onChangePage}) => {
   }
   return (
     <>
-      <MenuHeader onClickButton={handleClickButton}/>
       <Header 
       title = "This is title" 
       descr = "This is Description!" 
@@ -172,7 +168,7 @@ const HomePage = ({onChangePage}) => {
         <p>To win, a majority of the total ten cards played (including the one card that is not placed on the board) must be of the player's card color. To do this, the player must capture cards by placing a card adjacent to an opponent's card whereupon the 'ranks' of the sides where the two cards touch will be compared. If the rank of the opponent's card is higher than the player's card, the player's card will be captured and turned into the opponent's color. If the player's rank is higher, the opponent's card will be captured and changed into the player's color instead. </p>
       </Layout>
       <Layout title = "This is title" descr = "This is Description!" id = "layout3" urlBg = {bg3}/>
-      <Footer/>
+
 
     </>
   );
