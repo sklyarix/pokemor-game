@@ -2,15 +2,16 @@ import {useState} from 'react'
 import Navbar from './Navbar'
 import Menu from './Menu'
 
-const MenuHeader = ({onMenuHeaderClick}) => {
-    const [isActive,setActive] = useState(false)
+const MenuHeader = ({bgActive}) => {
+    const [isActive,setActive] = useState(null)
+    
     const onMenuClick = (page) => {
-        onMenuHeaderClick && onMenuHeaderClick(page)
+        setActive(prevState => !prevState);
     }
     return(
         <>
-        <Menu isMenuActive={isActive} setMenuActive={setActive} onMenuClick={onMenuClick}/>
-        <Navbar isBurgerActive={isActive} setBurgerActive={setActive}/>
+        <Menu isActive={isActive} />
+        <Navbar isBurgerActive={isActive} bgActive={bgActive} onMenuClick={onMenuClick}/>
         </>
     );
 };
