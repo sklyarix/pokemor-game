@@ -1,0 +1,35 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.start {
+  margin: 10px 0 30px;
+  text-align: center;
+}
+
+.startBtn {
+  padding: 6px 48px;
+  border: 1px solid transparent;
+  background-color: #ffad01;
+  font-family: 'Overlock', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1e2431;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.startBtn:hover {
+  background-color: #ffaf016d;
+}
+
+.card {
+  width: 268px;
+  height: 388px;
+  margin: 16px;
+  perspective: 1000px;
+}
